@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ponto de atenção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="form">
+        <form id="formCamp">
+            <h2>Dados do atendimento:</h2>
+
+            <label for="analistName">Nome do Analista:</label>
+            <input type="text" id="analistName" name="nome" placeholder="Digite o nome do analista" required>
+
+            <label for="context">Assunto:</label>
+            <input type="text" id="context" name="assunto" placeholder="Digite o assunto do atendimento">
+
+            <label for="idProtocol">ID/Protocolo:</label>
+            <input type="text" id="idProtocol" name="id" placeholder="Digite o ID/Protocolo">
+
+            <h3>Desvios:</h3>
+            <div id="desviationsContainer">
+            <input type="text" class="desviationsCamp" placeholder="Desvio 1">
+            </div>
+
+            <h3>Melhorias:</h3>
+            <div id="improvementsContainer">
+                <input type="text" class="improvementsCamp" placeholder="Melhoria 1">
+            </div>
+
+            <button type="submit">Enviar</button>
+            <button id="createImg">Gerar imagem</button>
+        </form>    
+    </div>
+
+
+    <div id="imageBlock">
+        <header>
+            <div>
+                <img src="/Projetos_Js/atentionPointv3/attentionPoint.jpg" alt="Megafone chamando atenção">
+            </div>
+            <div>
+                <h1>PONTO DE ATENÇÃO</h1>
+                <h3><span id="Name"></span>, sua nota foi: <span id="Name"></span></h3>
+                <p>Assunto: <span id="subject"></span></p>
+                <p>ID/Protocolo: <span id="id"></span></p>
+            </div>
+            <div>
+                <div id="notice"> <span id="notice">%</span></div>
+            </div>
+        </header>
+        <div class="section desviation">
+            <div class="notesTitle">
+                <img src="/Projetos_Js/atentionPointv3/warning.png" alt="warning" class="imgNotesTitle">
+                <h3 id="desviationColorIellow">Desvios</h3>
+            </div>
+            <div class="itens">
+                <ul id="itensDetour">
+
+                </ul>
+            </div>
+        </div>
+        <div class="section improvements">
+            <div class="notesTitle">
+                <img src="/Projetos_Js/atentionPointv3/check.png" alt="ok" class="imgNotesTitle">
+                <h3 id="desviationColorGreen">Melhorias</h3></div>
+            <div class="itens">
+                <ul id="itensImprovement">
+                    
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <p>Seguir boas práticas e manter o foco nas necessidades do cliente faz toda a diferença!</p>
+            <p class="footerInfos">Aguardo o retorno no prazo de até 2 (dois) dias úteis com a ciência ou contestação.</p>
+            <p class="footerInfos">Ao retornar a informação solicitada utilizem a opção "RESPONDER A TODOS" e não "RESPONDER"</p>
+        </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
