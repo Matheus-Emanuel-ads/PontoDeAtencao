@@ -127,5 +127,9 @@ document.getElementById('createImg').addEventListener('click', () => {
     });
 });
 
+const date = new Date().toLocaleDateString('pt-BR');
+document.getElementById("today").textContent = date; 
+
+
 // Inicializa nota na primeira carga
 atualizarPontuacao();
