@@ -121,7 +121,9 @@ document.getElementById('createImg').addEventListener('click', () => {
     const div = document.getElementById('imageBlock');
     html2canvas(div, {scale: 2}).then(canvas => {
         const link = document.createElement('a');
-        link.download = 'PontoDeAtencao.jpg';
+        let Name = document.getElementById("analistName").value;
+        let archiveName = "PontoDeAtencao_" + Name + ".jpg";
+        link.download = archiveName;
         link.href = canvas.toDataURL();
         link.click();
     });
