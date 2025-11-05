@@ -27,6 +27,10 @@ function atualizarPontuacao() {
     // Atualiza o span dentro do imageBlock
     document.getElementById("notice").textContent = totalPontos.toFixed(2).replace(".", ",") + "%";
 }
+    const zeroButton = document.getElementById("zeroButton");
+    zeroButton.addEventListener("click", function(){
+    document.getElementById("notice").textContent = "0,00%"
+    })
 
 
 // Função para criar novo campo de Desvio
